@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="heading col-lg-12">
+        <h3>
+            Our best features makes you more lazy..!
+        </h3>
+    </div>
+    <div class="featurecards">
+        <div class="card" style="width: 19rem;" *ngFor ='let featurecard of dailyUtilsFeatures'>
+            <img [src]="featurecard.featureIcon" class="card-img-top" alt="featurecard">
+            <div class="card-body">
+              <h5 class="card-title">{{featurecard.featureHeading}}</h5>
+              <p class="card-text">{{featurecard.featureDescription}}</p>
+            </div>
+          </div>
+    </div>
+</div>
+

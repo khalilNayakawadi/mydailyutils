@@ -1,0 +1,87 @@
+<div class="container my-5 contactform" id="contact">
+  <h1 class="heading text-center flip-scale-2-hor-top">Contact Me</h1>
+  <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+    <div class="row row1">
+      <div class="col-12 col-lg-6 my-2 formrow">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Your Name"
+          aria-label="Name"
+          id="name"
+          name="name"
+          [(ngModel)]="model.name"
+          #name="ngModel"
+          required
+        />
+        @if(name.invalid && name.touched){
+        <div class="text-danger">Name is required</div>
+        }
+      </div>
+      <div class="col-12 col-lg-6 my-2 formrow">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Contact Number"
+          aria-label="Contact"
+          id="contact"
+          name="contact"
+          [(ngModel)]="model.contact"
+          #contact="ngModel"
+          required
+        />
+        @if(contact.invalid && contact.touched){
+        <div class="text-danger">Contact is required</div>
+        }
+      </div>
+      <div class="col-12 col-lg-6 my-2 formrow">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Email"
+          aria-label="Email"
+          id="email"
+          name="email"
+          [(ngModel)]="model.email"
+          #email="ngModel"
+          required
+        />
+        @if(email.invalid && email.touched){
+        <div class="text-danger">Email is required</div>
+        }
+      </div>
+      <div class="col-12 col-lg-6 my-2 formrow">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Subject"
+          aria-label="Subject"
+          id="subject"
+          name="subject"
+          [(ngModel)]="model.subject"
+          #subject="ngModel"
+          required
+        />
+        @if(subject.invalid && subject.touched){
+        <div class="text-danger">Subject is required</div>
+        }
+      </div>
+      <div class="col-12 m-1 my-2 formrow" ngSkipHyderation>
+          <textarea
+            class="form-control"
+            placeholder="Message"
+            id="floatingTextarea"
+            id="message"
+            name="message"
+            [(ngModel)]="model.message"
+            #message="ngModel"
+            required
+          >
+          </textarea>
+      </div>
+      <div class="formbtn">
+        <input type="submit" class="btn btn-lg btn-success ms-1 my-2" />
+      </div>
+    </div>
+  </form>
+</div>

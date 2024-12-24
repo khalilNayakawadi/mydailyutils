@@ -1,0 +1,48 @@
+.hero{
+    height: 550px;
+    background-image: url('../../Assets/herofinal.png');
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: 75%;
+    background-color: rgb(227, 236, 241);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.brandname{
+    color: rgb(0, 132, 255);
+    font-size: 40px;
+}
+
+.tagline{
+    font-weight: 500px;
+    font-size: 20px;
+}
+
+.branding a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+button{
+    margin: 8px;
+}
+
+
+@media only screen and (max-width: 450px) {
+   .hero{
+    background-size: cover;
+    background-image: url('../../Assets/herofinalmb.jpg');
+   }
+
+   .brandname{
+    color: rgb(248, 195, 59);
+    font-size: 40px;
+}
+    .tagline{
+        color: aliceblue;
+    }
+}
